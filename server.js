@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const app = express();
 
@@ -11,7 +12,7 @@ let sathwik =`
 
 <h1>Page</h1>
 `;
-
+// shavdhjsvdhjvjhsavdjvsvdjvajdvhjavdhjvadhvasjhvjahsdvhjavdhasvhjavhdvahvdhjavjhdva
 app.get('/',(req,res)=>{
     res.status(200).send(s);
 })
@@ -19,5 +20,5 @@ app.get('/sathwik',(req,res)=>{
     res.status(200).send(sathwik);
 })
 
-
-app.listen(5000,()=>console.log('5000'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT,()=>console.log('5000'));
